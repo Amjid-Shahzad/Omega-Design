@@ -40,7 +40,7 @@ if ( ! defined( 'OMEGA_DESIGN_CHILD_DIR' ) ) {
 define( 'OMEGA_DESIGN_INCLUDES', OMEGA_DESIGN_DIR . '/includes' );
 define( 'OMEGA_DESIGN_ADMIN', OMEGA_DESIGN_DIR . '/admin' );
 define( 'OMEGA_DESIGN_BLOCKS', OMEGA_DESIGN_DIR . '/blocks' );
-define( 'OMEGA_DESIGN_PATTERNS', OMEGA_DESIGN_DIR . '/pattern' );
+define( 'OMEGA_DESIGN_PATTERN', OMEGA_DESIGN_DIR . '/pattern' );
 define( 'OMEGA_DESIGN_PARTS', OMEGA_DESIGN_DIR . '/parts' );
 define( 'OMEGA_DESIGN_TEMPLATES', OMEGA_DESIGN_DIR . '/templates' );
 define( 'OMEGA_DESIGN_WIDGETS', OMEGA_DESIGN_DIR . '/widgets' );
@@ -92,15 +92,15 @@ define( 'OMEGA_DESIGN_WOOCOMMERCE_ACTIVE', class_exists( 'WooCommerce' ) );
 define( 'OMEGA_DESIGN_WOOCOMMERCE_UPLOADS', OMEGA_DESIGN_UPLOADS_DIR . '/woocommerce' );
 define( 'OMEGA_DESIGN_WOOCOMMERCE_TEMPLATES', OMEGA_DESIGN_TEMPLATES . '/woocommerce' );
 
-/**
- * EDD (Easy Digital Downloads) Support
- */
-define( 'OMEGA_DESIGN_EDD_ACTIVE', class_exists( 'Easy_Digital_Downloads' ) );
+// /**
+//  * EDD (Easy Digital Downloads) Support
+//  */
+// define( 'OMEGA_DESIGN_EDD_ACTIVE', class_exists( 'Easy_Digital_Downloads' ) );
 
-/**
- * BuddyPress Support
- */
-define( 'OMEGA_DESIGN_BUDDYPRESS_ACTIVE', class_exists( 'BuddyPress' ) );
+// /**
+//  * BuddyPress Support
+//  */
+// define( 'OMEGA_DESIGN_BUDDYPRESS_ACTIVE', class_exists( 'BuddyPress' ) );
 
 /**
  * Custom Post Types Uploads
@@ -419,3 +419,29 @@ add_action( 'init', 'omega_design_check_php_compatibility' );
 
 // Hook to signal theme is ready
 do_action( 'omega_design_theme_loaded' );
+
+
+
+
+
+
+
+
+
+
+
+
+
+add_filter( 'default_wp_template_part_areas', 'mytheme_register_megamenu_area' );
+
+function mytheme_register_megamenu_area( array $areas ) {
+    $areas[] = array(
+        'area'        => 'megamenu',           // Internal identifier
+        'area_tag'    => 'nav',                 // HTML tag wrapper
+        'label'       => __( 'Mega Menu', 'mytheme' ),
+        'description' => __( 'Category mega menu template parts', 'mytheme' ),
+        'icon'        => 'menu'                 // Optional: 'header', 'footer', or 'sidebar'
+    );
+    
+    return $areas;
+}

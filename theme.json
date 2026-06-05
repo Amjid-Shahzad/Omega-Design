@@ -5,56 +5,56 @@
         "appearanceTools": true,
         "color": {
             "palette": [
-              {
-                "color":"#1FBB00",
-                "name":"Primary",
-                "slug":"primary"
-              },
-              {
-                "color":"#051A00",
-                "name":"Secondary",
-                "slug":"secondary"
-              },
-              {
-                "color":"#B35B00",
-                "name":"Accent",
-                "slug":"accent"
-              },
-              {
-                "color":"#FFFFFF",
-                "name":"Background",
-                "slug":"background"
-              },
-              {
-                "color":"#093400",
-                "name":"Surface",
-                "slug":"surface"
-              },
-              {
-                "color":"#041200",
-                "name":"Heading",
-                "slug":"heading"
-              },
-              {
-                "color":"#2A2A2A",
-                "name":"Text",
-                "slug":"text"
-              },
-              {
-                "color":"#0F5900",
-                "name":"Success",
-                "slug":"success"
-              },
-              {
-                "color":"#DEDC00",
-                "name":"Warning",
-                "slug":"warning"
-              },
-              {
-                "color":"#8A0000",
-                "name":"Danger",
-                "slug":"danger"
-              }
+                  {
+                    "color":"#1FBB00",
+                    "name":"Primary",
+                    "slug":"primary"
+                  },
+                  {
+                    "color":"#051A00",
+                    "name":"Secondary",
+                    "slug":"secondary"
+                  },
+                  {
+                    "color":"#B35B00",
+                    "name":"Accent",
+                    "slug":"accent"
+                  },
+                  {
+                    "color":"#FFFFFF",
+                    "name":"Background",
+                    "slug":"background"
+                  },
+                  {
+                    "color":"#093400",
+                    "name":"Surface",
+                    "slug":"surface"
+                  },
+                  {
+                    "color":"#041200",
+                    "name":"Heading",
+                    "slug":"heading"
+                  },
+                  {
+                    "color":"#2A2A2A",
+                    "name":"Text",
+                    "slug":"text"
+                  },
+                  {
+                    "color":"#0F5900",
+                    "name":"Success",
+                    "slug":"success"
+                  },
+                  {
+                    "color":"#DEDC00",
+                    "name":"Warning",
+                    "slug":"warning"
+                  },
+                  {
+                    "color":"#8A0000",
+                    "name":"Danger",
+                    "slug":"danger"
+                  }
               
               
 
@@ -146,5 +146,28 @@
         "customUnits": ["px", "em", "rem", "%"],
         "enableBlockBinding": true
     },
-    "styles": {}
+    "styles": {},
+      "templateParts": [
+    {
+      "area": "footer",
+      "name": "footer",
+      "title": "Footer"
+    },
+    {
+      "area": "header",
+      "name": "header", 
+      "title": "Header"
+    },
+    {
+      "area": "sidebar",
+      "name": "sidebar", 
+      "title": "Sidebar"
+    },
+    {
+      "area": "mega-menu",
+      "name": "mega-menu", 
+      "title": "Mega Menu"
+    }
+
+  ]
 }
